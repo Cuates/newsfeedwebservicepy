@@ -1,0 +1,9 @@
+pyodbc
+psycopg2-binary
+flask
+flask-restful
+gunicorn
+virtualenv
+pytz
+tzlocal
+sqlalchemy
