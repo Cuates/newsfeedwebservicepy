@@ -42,6 +42,9 @@
 * flask-restful
   * `pip3.9 install flask-restful`
     * [Flask Restful](https://pypi.org/project/Flask-RESTful/)
+* flask-cors
+  * `pip3.9 install flask-cors`
+    * [Flask CORS](https://pypi.org/project/Flask-Cors/)
 * Green Unicorn
   * `pip3.9 install gunicorn`
     * [Gunicorn](https://pypi.org/project/gunicorn/)
