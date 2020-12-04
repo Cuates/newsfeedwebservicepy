@@ -2,6 +2,7 @@ pyodbc
 psycopg2-binary
 flask
 flask-restful
+flask-cors
 gunicorn
 virtualenv
 pytz
