@@ -86,7 +86,7 @@
     * `deactivate`
   * Code whatever project you are trying to accomplish
  * Login to the server as root user
-   * Create a file name "moviefeedwebservice.service" in the following directory '/etc/systemd/system/'
+   * Create a file name "newsfeedwebservice.service" in the following directory '/etc/systemd/system/'
      * The path to your project will vary
      * Paste the following into the file
        * <pre>
