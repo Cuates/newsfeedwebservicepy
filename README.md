@@ -91,14 +91,14 @@
      * Paste the following into the file
        * <pre>
            [Unit]
-           Description=movie feed web service service
+           Description=news feed web service service
            After=network.target
 
            [Service]
            User=root
            Group=root
            WorkingDirectory=/path/to/your/project
-           ExecStart=/usr/local/bin/gunicorn --bind 127.0.0.1:4817 --workers=2 --threads=25 --chdir /path/to/your/project moviefeedwebservice:app
+           ExecStart=/usr/local/bin/gunicorn --bind 127.0.0.1:4817 --workers=2 --threads=25 --chdir /path/to/your/project newsfeedwebservice:app
 
            [Install]
            WantedBy=multi-user.target
