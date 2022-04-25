@@ -126,10 +126,10 @@ class NewsFeedWebServiceClass():
           # Close execution
           messageResponse.close()
 
-        # Check if connection was established
-        if (self.connection):
-          # Close database connection
-          self.connection.close()
+        ## Check if connection was established
+        #if (self.connection):
+          ## Close database connection
+          #self.connection.close()
       else:
         # Set message
         returnMessage = [{'SError': 'Error', 'SMessage': connectionStatus['SError']}]
@@ -141,6 +141,15 @@ class NewsFeedWebServiceClass():
 
       # Log message
       self._setLogger('Issue ' + actionWord + ' news feed : ' + str(e))
+    # Finally closing connection
+    finally:
+      # Check if connection is not None
+      if self.connection is not None:
+        # Close database connnection
+        self.connection.close()
+        # Will close all connections of the connection pool.
+        self.engine.dispose()
+        #print('Database connection close.')
 
     # Return message
     return returnMessage
@@ -255,10 +264,10 @@ class NewsFeedWebServiceClass():
           # Close execution
           messageResponse.close()
 
-        # Check if connection was established
-        if (self.connection):
-          # Close database connection
-          self.connection.close()
+        ## Check if connection was established
+        #if (self.connection):
+          ## Close database connection
+          #self.connection.close()
       else:
         # Set message
         returnMessage = [{'SError': 'Error', 'SMessage': connectionStatus['SError']}]
@@ -269,6 +278,15 @@ class NewsFeedWebServiceClass():
 
       # Log message
       self._setLogger('Issue ' + actionWord + ' news feed : ' + str(e))
+    # Finally closing connection
+    finally:
+      # Check if connection is not None
+      if self.connection is not None:
+        # Close database connnection
+        self.connection.close()
+        # Will close all connections of the connection pool.
+        self.engine.dispose()
+        #print('Database connection close.')
 
     # Return message
     return returnMessage
